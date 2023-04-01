@@ -1,0 +1,27 @@
+.breadcrumb {
+    display: flex;
+    flex-wrap: wrap;
+    padding: $breadcrumb-padding-y $breadcrumb-padding-x;
+    border-radius: $breadcrumb-border-radius;
+    margin-bottom: $breadcrumb-margin-bottom;
+    background-color: $breadcrumb-bg;
+    font-size: $breadcrumb-font-size;
+    list-style: none;
+}
+
+.breadcrumb-item {
+    + .breadcrumb-item {
+        padding-left: $breadcrumb-item-padding-x;
+
+        &::before {
+            float: left;
+            padding-right: $breadcrumb-item-padding-x;
+            color: $breadcrumb-divider-color;
+            content: $breadcrumb-divider;
+        }
+    }
+
+    &.active {
+        color: $breadcrumb-active-color;
+    }
+}

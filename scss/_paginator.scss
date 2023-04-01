@@ -1,0 +1,141 @@
+.pagination {
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    .page-item {
+        .page-link {
+            position: relative;
+            display: block;
+            color: $pagination-color;
+            text-decoration: none;
+            background-color: $pagination-bg;
+            border: $pagination-border;
+            // transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+            padding: $pagination-padding;
+
+            &:hover {
+                z-index: 2;
+                color: $pagination-hover-color;
+                text-decoration: none;
+                background-color: $pagination-hover-bg;
+                border-color: $pagination-hover-border-color;
+            }
+
+            &:focus {
+                z-index: 3;
+                color: $pagination-focus-color;
+                background-color: $pagination-focus-bg;
+                outline: $pagination-focus-outline;
+                box-shadow: $pagination-focus-box-shadow;
+            }
+        }
+
+        &:not(:first-child) {
+            .page-link {
+                margin-left: $pagination-margin-start;
+            }
+        }
+
+        &.active {
+            .page-link {
+                z-index: 3;
+                color: $pagination-active-color;
+                background-color: $pagination-active-bg;
+                border-color: $pagination-active-border-color;
+            }
+        }
+        &:first-child {
+            .page-link {
+                border-top-left-radius: $pagination-border-radius;
+                border-bottom-left-radius: $pagination-border-radius;
+            }
+        }
+        &:last-child {
+            .page-link {
+                border-top-right-radius: $pagination-border-radius;
+                border-bottom-right-radius: $pagination-border-radius;
+            }
+        }
+    }
+
+    &.pagination-lg {
+        .page-link {
+            padding: $pagination-lg-padding;
+            font-size: $pagination-lg-font-size;
+        }
+        .page-item {
+            &:first-child {
+                .page-link {
+                    border-top-left-radius: $pagination-lg-border-radius;
+                    border-bottom-left-radius: $pagination-lg-border-radius;
+                }
+            }
+            &:last-child {
+                .page-link {
+                    border-top-right-radius: $pagination-lg-border-radius;
+                    border-bottom-right-radius: $pagination-lg-border-radius;
+                }
+            }
+        }
+    }
+
+    &.pagination-sm {
+        .page-link {
+            padding: $pagination-sm-padding;
+            font-size: $pagination-sm-font-size;
+        }
+        .page-item {
+            &:first-child {
+                .page-link {
+                    border-top-left-radius: $pagination-sm-border-radius;
+                    border-bottom-left-radius: $pagination-sm-border-radius;
+                }
+            }
+            &:last-child {
+                .page-link {
+                    border-top-right-radius: $pagination-sm-border-radius;
+                    border-bottom-right-radius: $pagination-sm-border-radius;
+                }
+            }
+        }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .page-link {
+            transition: none;
+        }
+    }
+}
+
+.paginator {
+    display: flex;
+    a {
+        cursor: pointer;
+        color: $paginator-color;
+        float: left;
+        padding: $paginator-padding;
+        text-decoration: none;
+        transition: background-color .3s;
+        border: $paginator-border;
+        margin: $paginator-margin;
+        border-radius: $paginator-border-radius;
+        &.active {
+            background-color: $paginator-active-bg;
+            color: $paginator-active-color;
+            border: $paginator-active-border;
+        }
+        &:hover {
+            &:not(.active) {
+                background-color: #ddd;
+            }
+        }
+    }
+
+    &.paginator-lg {
+        font-size: 1.5rem;
+    }
+
+    &.paginator-sm {
+        font-size: .800rem;
+    }
+}

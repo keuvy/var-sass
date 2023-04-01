@@ -1,0 +1,208 @@
+.input {
+    outline: none;
+    border: $input-border;
+    border-radius: $input-border-radius;
+    color: $input-color;
+    padding: $input-padding;
+    font-size: $input-font-size;
+    line-height: $input-line-height;
+    background-color: $input-background-color;
+    &::placeholder {
+        font-size: $input-font-size;
+        line-height: $input-line-height;
+    }
+    &.input-xl {
+        border: $input-xl-border;
+        border-radius: $input-xl-border-radius;
+        color: $input-xl-color;
+        padding: $input-xl-padding;
+        font-size: $input-xl-font-size;
+        line-height: $input-xl-line-height;
+    }
+    &.input-lg {
+        border: $input-lg-border;
+        border-radius: $input-lg-border-radius;
+        color: $input-lg-color;
+        padding: $input-lg-padding;
+        font-size: $input-lg-font-size;
+        line-height: $input-lg-line-height;
+    }
+    &.input-sm {
+        border: $input-sm-border;
+        border-radius: $input-sm-border-radius;
+        color: $input-sm-color;
+        padding: $input-sm-padding;
+        font-size: $input-sm-font-size;
+        line-height: $input-sm-line-height;
+    }
+
+    &[type='date'] {
+        display: block;
+        -webkit-appearance: textfield;
+        -moz-appearance: textfield;
+        min-height: 40px !important;
+    }
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap; // For form validation feedback
+    align-items: stretch;
+    width: 100%;
+    .input {
+        position: relative; // For focus state's z-index
+        flex: 1 1 auto;
+        width: 1%;
+        min-width: 0;
+    }
+
+    .btn {
+        position: relative;
+        z-index: 2;
+
+        &:focus {
+            z-index: 3;
+        }
+    }
+
+    .input-group-text {
+        position: relative;
+        z-index: 2;
+        text-align: center;
+        border-radius: $input-border-radius;
+        padding: $input-padding;
+        font-size: $input-font-size;
+        color: $primary-color;
+        background: $primary;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+
+        &.input-group-text-secondary {
+            color: $secondary-color;
+            background: $secondary;
+        }
+
+        &.input-group-text-medium {
+            color: $medium-color;
+            background: $medium;
+        }
+
+        &.input-group-text-dark {
+            color: $dark-color;
+            background: $dark;
+        }
+
+        &.input-group-text-success {
+            color: $success-color;
+            background: $success;
+        }
+
+        &.input-group-text-danger {
+            color: $danger-color;
+            background: $danger;
+        }
+
+        &.input-group-text-medium {
+            color: $medium-color;
+            background: $medium;
+        }
+
+        &.input-group-text-dark {
+            color: $dark-color;
+            background: $dark;
+        }
+    }
+
+    :not(:first-child) {
+        // margin-left: -1px;
+        border-top-left-radius: 0 !important;
+        border-bottom-left-radius: 0 !important;
+    }
+
+    :not(:last-child) {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+    :nth-last-child(n + 3) {
+        border-top-right-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+    }
+
+    &.input-group-sm {
+        .input {
+            border: $input-sm-border;
+            border-radius: $input-sm-border-radius;
+            color: $input-sm-color;
+            padding: $input-sm-padding;
+            font-size: $input-sm-font-size;
+            line-height: $input-sm-line-height;
+        }
+        .input-group-text {
+            border-radius: $input-sm-border-radius;
+            padding: $input-sm-padding;
+            font-size: $input-sm-font-size;
+            line-height: $input-sm-line-height;
+        }
+    }
+
+    &.input-group-lg {
+        .input {
+            border: $input-lg-border;
+            border-radius: $input-lg-border-radius;
+            color: $input-lg-color;
+            padding: $input-lg-padding;
+            font-size: $input-lg-font-size;
+            line-height: $input-lg-line-height;
+        }
+        .input-group-text {
+            border-radius: $input-lg-border-radius;
+            padding: $input-lg-padding;
+            font-size: $input-lg-font-size;
+            line-height: $input-lg-line-height;
+        }
+    }
+
+    &.input-group-xl {
+        .input {
+            border: $input-xl-border;
+            border-radius: $input-xl-border-radius;
+            color: $input-xl-color;
+            padding: $input-xl-padding;
+            font-size: $input-xl-font-size;
+            line-height: $input-xl-line-height;
+        }
+        .input-group-text {
+            border-radius: $input-xl-border-radius;
+            padding: $input-xl-padding;
+            font-size: $input-xl-font-size;
+            line-height: $input-xl-line-height;
+        }
+    }
+}
+
+.input-form {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    grid-gap: 1rem;
+    align-items: center;
+    .input-label {
+        grid-column: 1 / 2;
+    }
+
+    .input {
+        grid-column: 2 / 3;
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr !important;
+        .input-label {
+            grid-column: 1 !important;
+        }
+
+        .input {
+            grid-column: 1 !important;
+        }
+    }
+}

@@ -1,0 +1,151 @@
+.toggle {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked {
+            & + .toggle-input {
+                background-color: $primary;
+            }
+            & + .toggle-input-danger {
+                background-color: $danger !important;
+            }
+            & + .toggle-input-info {
+                background-color: $info !important;
+            }
+            & + .toggle-input-success {
+                background-color: $success !important;
+            }
+            & + .toggle-input-dark {
+                background-color: $dark !important;
+            }
+        }
+    }
+
+    .toggle-input {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 34px;
+        &:before {
+            position: absolute;
+            content: '';
+            background-color: white;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+            border-radius: 50%;
+        }
+    }
+
+    &.toggle-md {
+        font-size: $toggle-md-font-size;
+        padding-left: $toggle-md-padding-left;
+        height: $toggle-md-height;
+        input {
+            &:checked {
+                & + .toggle-input {
+                    &:before {
+                        -webkit-transform: translateX($toggle-md-input-width);
+                        -ms-transform: translateX($toggle-md-input-width);
+                        transform: translateX($toggle-md-input-width);
+                    }
+                }
+            }
+        }
+        .toggle-input {
+            width: $toggle-md-width;
+            height: $toggle-md-height;
+            &:before {
+                height: $toggle-md-input-height;
+                width: $toggle-md-input-width;
+                left: $toggle-md-input-left;
+                bottom: $toggle-md-input-bottom;
+            }
+        }
+    }
+
+    &.toggle-sm {
+        font-size: $toggle-sm-font-size;
+        padding-left: $toggle-sm-padding-left;
+        height: $toggle-sm-height;
+        input {
+            &:checked {
+                & + .toggle-input {
+                    &:before {
+                        -webkit-transform: translateX($toggle-sm-input-width);
+                        -ms-transform: translateX($toggle-sm-input-width);
+                        transform: translateX($toggle-sm-input-width);
+                    }
+                }
+            }
+        }
+        .toggle-input {
+            width: $toggle-sm-width;
+            height: $toggle-sm-height;
+            &:before {
+                height: $toggle-sm-input-height;
+                width: $toggle-sm-input-width;
+                left: $toggle-sm-input-left;
+                bottom: $toggle-sm-input-bottom;
+            }
+        }
+    }
+
+    &.toggle-lg {
+        font-size: $toggle-lg-font-size;
+        padding-left: $toggle-lg-padding-left;
+        height: $toggle-lg-height;
+        input {
+            &:checked {
+                & + .toggle-input {
+                    &:before {
+                        -webkit-transform: translateX($toggle-lg-input-width);
+                        -ms-transform: translateX($toggle-lg-input-width);
+                        transform: translateX($toggle-lg-input-width);
+                    }
+                }
+            }
+        }
+        .toggle-input {
+            width: $toggle-lg-width;
+            height: $toggle-lg-height;
+            &:before {
+                height: $toggle-lg-input-height;
+                width: $toggle-lg-input-width;
+                left: $toggle-lg-input-left;
+                bottom: $toggle-lg-input-bottom;
+            }
+        }
+    }
+
+    &:hover {
+        input {
+            &:checked {
+                & + .toggle-input {
+                    background-color: $primary-hover;
+                }
+                & + .toggle-input-danger {
+                    background-color: $danger-hover !important;
+                }
+                & + .toggle-input-info {
+                    background-color: $info-hover !important;
+                }
+                & + .toggle-input-success {
+                    background-color: $success-hover !important;
+                }
+                & + .toggle-input-dark {
+                    background-color: $dark-hover !important;
+                }
+            }
+        }
+    }
+}

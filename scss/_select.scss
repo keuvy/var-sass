@@ -1,0 +1,17 @@
+.select {
+    outline: none;
+    border: $select-border;
+    border-radius: $select-border-radius;
+    padding: $select-padding;
+    &.select-sm {
+        border-radius: $select-sm-border-radius;
+        padding: $select-sm-padding;
+        font-size: $select-sm-font-size;
+    }
+
+    &.select-lg {
+        border-radius: $select-lg-border-radius;
+        padding: $select-lg-padding;
+        font-size: $select-lg-font-size;
+    }
+}

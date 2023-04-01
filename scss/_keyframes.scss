@@ -1,0 +1,92 @@
+/* -------------------------------------------------------------------------- */
+/*                                   General                                  */
+/* -------------------------------------------------------------------------- */
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-100px);
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-right {
+    0% {
+        -webkit-transform: translateX(100px);
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-in-bottom {
+    0% {
+        -webkit-transform: translateY(15px);
+        transform: translateY(15px);
+        opacity: 0;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes zoom-in {
+    0% {
+        -webkit-transform: scale(1.15);
+        transform: scale(1.15);
+        opacity: 0.1;
+    }
+
+    to {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                    Alert                                   */
+/* -------------------------------------------------------------------------- */
+@keyframes alert-scale-in {
+    0% {
+        transform: scale(0.8) translate(-50%, 0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) translate(-50%, 0);
+        opacity: 1;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                  Dropdown                                  */
+/* -------------------------------------------------------------------------- */
+@keyframes dropdown-in-center {
+    0% {
+        transform: translate(-50%, -40px) scaleY(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translate(-50%, 0) scaleY(1);
+        opacity: 1;
+    }
+}
+
+@keyframes dropdown-in {
+    0% {
+        transform: translateY(-40px) scaleY(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) scaleY(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,135 @@
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    .tooltiptext {
+        visibility: hidden;
+        width: $tooltip-width;
+        background-color: $tooltip-bg;
+        color: $tooltip-color;
+        text-align: $tooltip-text-align;
+        padding: $tooltip-padding;
+        border-radius: $tooltip-border-radius;
+        font-size: $tooltip-font-size;
+        margin: $tooltip-margin;
+
+        /* Position the tooltip text */
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+
+        /* Fade in tooltip */
+        opacity: 0;
+        transition: opacity 0.3s;
+        &::after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: $tooltip-bg transparent transparent transparent;
+        }
+    }
+
+    &:hover {
+        .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.tooltip-table {
+    position: relative;
+    .tooltip-table-text {
+        display: none;
+        text-decoration: none;
+        text-align: $tooltip-text-align;
+        font-size: $tooltip-font-size;
+        width: $tooltip-width;
+        background-color: $tooltip-bg;
+        color: $tooltip-color;
+        margin: $tooltip-margin;
+        border-radius: $tooltip-border-radius;
+        padding: $tooltip-padding;
+    }
+    &:hover {
+        .tooltip-table-text {
+            display: block;
+            position: absolute;
+            z-index: 1001;
+            &::after {
+                content: "";
+                position: absolute;
+                border-width: 15px;
+                border-style: solid;
+            }
+        }
+    }
+
+    &.tooltip-table-left {
+        &:hover {
+            .tooltip-table-text {
+                top: 0;
+                left: 0;
+                margin-right: -60px;
+                &::after {
+                    right: 0;
+                    top: calc(50% - 15px);
+                    margin-right: -23px;
+                    border-color: transparent transparent transparent $tooltip-bg;
+                }
+            }
+        }
+    }
+    &.tooltip-table-right {
+        &:hover {
+            .tooltip-table-text {
+                top: 0;
+                right: 0;
+                margin-right: -$tooltip-width;
+                &::after {
+                    left: 0;
+                    top: 8px;
+                    margin-left: -23px;
+                    border-color: transparent $tooltip-bg transparent transparent;
+                }
+            }
+        }
+    }
+    &.tooltip-table-bottom {
+        &:hover {
+            .tooltip-table-text {
+                top: 100%;
+                left: calc(50% - 150px);
+                margin-left: 0px;
+                &::after {
+                    top: 0;
+                    left: calc(50% - 15px);
+                    margin-top: -23px;
+                    border-color: transparent transparent $tooltip-bg transparent;
+                }
+            }
+        }
+    }
+    &.tooltip-table-top {
+        &:hover {
+            .tooltip-table-text {
+                bottom: 100%;
+                left: calc(50% - 150px);
+                margin-left: 0px;
+                &::after {
+                    bottom: 0;
+                    left: calc(50% - 15px);
+                    margin-bottom: -23px;
+                    border-color: $tooltip-bg transparent transparent transparent;
+                }
+            }
+        }
+    }
+}

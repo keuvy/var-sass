@@ -1,0 +1,10 @@
+.collapse {
+    .collapse-summary {
+        list-style-type: none;
+    }
+    .collapse-details {
+        background-color: $collapse-details-bg;
+        margin: $collapse-details-margin;
+        padding: $collapse-details-padding;
+    }
+}

@@ -1,0 +1,202 @@
+.btn {
+    text-align: center;
+    cursor: pointer;
+    border-radius: $btn-border-radius;
+    padding-top: $btn-padding-top;
+    padding-bottom: $btn-padding-bottom;
+    padding-left: $btn-padding-left;
+    padding-right: $btn-padding-right;
+    font-size: $btn-font-size;
+    border: none;
+    display: inline-block;
+    background-color: transparent;
+    border: 1px solid transparent;
+
+    &.btn-primary {
+        color: $primary-color;
+        background: $primary;
+        &:hover {
+            color: $primary-color-hover;
+            background: $primary-hover;
+        }
+    }
+
+    &.btn-secondary {
+        color: $secondary-color;
+        background: $secondary;
+        &:hover {
+            color: $secondary-color-hover;
+            background: $secondary-hover;
+        }
+    }
+
+    &.btn-medium {
+        color: $medium-color;
+        background: $medium;
+        &:hover {
+            color: $medium-color-hover;
+            background: $medium-hover;
+        }
+    }
+
+    &.btn-dark {
+        color: $dark-color;
+        background: $dark;
+        &:hover {
+            color: $dark-color-hover;
+            background: $dark-hover;
+        }
+    }
+
+    &.btn-success {
+        color: $success-color;
+        background: $success;
+        &:hover {
+            color: $success-color-hover;
+            background: $success-hover;
+        }
+    }
+
+    &.btn-danger {
+        color: $danger-color;
+        background: $danger;
+        &:hover {
+            color: $danger-color-hover;
+            background: $danger-hover;
+        }
+    }
+
+    &.btn-warning {
+        color: $warning-color;
+        background: $warning;
+        &:hover {
+            color: $warning-color-hover;
+            background: $warning-hover;
+        }
+    }
+
+    &.btn-info {
+        color: $info-color;
+        background: $info;
+        &:hover {
+            color: $info-color-hover;
+            background: $info-hover;
+        }
+    }
+
+    &.btn-outline-primary {
+        color: $primary;
+        border-color: $primary;
+        &:hover {
+            color: $primary-color-hover;
+            background: $primary-hover;
+            border-color: $primary-hover;
+        }
+    }
+
+    &.btn-outline-secondary {
+        color: $secondary;
+        border-color: $secondary;
+        &:hover {
+            color: $secondary-color-hover;
+            background: $secondary-hover;
+            border-color: $secondary-hover;
+        }
+    }
+
+    &.btn-outline-medium {
+        color: $medium;
+        border-color: $medium;
+        &:hover {
+            color: $medium-color-hover;
+            background: $medium-hover;
+            border-color: $medium-hover;
+        }
+    }
+
+    &.btn-outline-dark {
+        color: $dark;
+        border-color: $dark;
+        &:hover {
+            color: $dark-color-hover;
+            background: $dark-hover;
+            border-color: $dark-hover;
+        }
+    }
+
+    &.btn-outline-success {
+        color: $success;
+        border-color: $success;
+        &:hover {
+            color: $success-color-hover;
+            background: $success-hover;
+            border-color: $success-hover;
+        }
+    }
+
+    &.btn-outline-danger {
+        color: $danger;
+        border-color: $danger;
+        &:hover {
+            color: $danger-color-hover;
+            background: $danger-hover;
+            border-color: $danger-hover;
+        }
+    }
+
+    &.btn-outline-warning {
+        color: $warning;
+        border-color: $warning;
+        &:hover {
+            color: $warning-color-hover;
+            background: $warning-hover;
+            border-color: $warning-hover;
+        }
+    }
+
+    &.btn-outline-info {
+        color: $info;
+        border-color: $info;
+        &:hover {
+            color: $info-color-hover;
+            background: $info-hover;
+            border-color: $info-hover;
+        }
+    }
+
+    &.btn-xl {
+        padding-top: $btn-xl-padding-top;
+        padding-bottom: $btn-xl-padding-bottom;
+        padding-left: $btn-xl-padding-left;
+        padding-right: $btn-xl-padding-right;
+        font-size: $btn-xl-font-size;
+    }
+
+    &.btn-lg {
+        padding-top: $btn-lg-padding-top;
+        padding-bottom: $btn-lg-padding-bottom;
+        padding-left: $btn-lg-padding-left;
+        padding-right: $btn-lg-padding-right;
+        font-size: $btn-lg-font-size;
+    }
+
+    &.btn-sm {
+        padding-top: $btn-sm-padding-top;
+        padding-bottom: $btn-sm-padding-bottom;
+        padding-left: $btn-sm-padding-left;
+        padding-right: $btn-sm-padding-right;
+        font-size: $btn-sm-font-size;
+    }
+
+    &.btn-xs {
+        padding-top: $btn-xs-padding-top;
+        padding-bottom: $btn-xs-padding-bottom;
+        padding-left: $btn-xs-padding-left;
+        padding-right: $btn-xs-padding-right;
+        font-size: $btn-xs-font-size;
+    }
+
+    &:disabled {
+        opacity: $btn-disabled-opacity;
+    }
+}

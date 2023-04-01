@@ -1,0 +1,67 @@
+@import 'keyframes';
+
+.alert {
+    padding: $alert-padding;
+    background-color: $secondary;
+    border-radius: $alert-border-radius;
+
+    &.alert-success {
+        color: #ffffff;
+        background-color: $success !important;
+    }
+    &.alert-danger {
+        color: #ffffff;
+        background-color: $danger !important;
+    }
+    &.alert-warning {
+        color: #ffffff;
+        background-color: $warning !important;
+    }
+
+    &.alert-sm {
+        padding: $alert-padding-sm;
+    }
+    &.alert-lg {
+        padding: $alert-padding-lg;
+    }
+
+    &.alert-notification {
+        position: fixed;
+        z-index: 999;
+        max-width: 50%;
+        .close {
+            color: $dark;
+            float: right;
+            margin-left: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            cursor: pointer;
+        }
+    }
+    &.alert-notification-center {
+        transform-origin: 15% 25%;
+        animation: alert-scale-in 0.25s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+        left: 50%;
+        top: 50%;
+    }
+    &.alert-notification-bottom-left {
+        animation: slide-in-left 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        bottom: 15px;
+        left: 15px;
+    }
+    &.alert-notification-bottom-right {
+        animation: slide-in-right 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        bottom: 15px;
+        right: 15px;
+    }
+    &.alert-notification-top-left {
+        animation: slide-in-left 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        top: 15px;
+        left: 15px;
+    }
+    &.alert-notification-top-right {
+        animation: slide-in-right 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+        top: 15px;
+        right: 15px;
+    }
+}

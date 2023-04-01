@@ -1,0 +1,86 @@
+.modal {
+    display: none;
+
+    .modal-container {
+        /* modal container fixed across whole screen */
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* z-index must be higher than .jw-modal-background */
+        z-index: 1000;
+
+        /* enables scrolling for tall modals */
+        overflow: auto;
+        &.modal-container-center {
+            display: flex;
+            align-items: center;
+        }
+        .modal-content {
+            animation: $modal-animation-in $modal-animation-in-duration $modal-animation-in-easing;
+            border-radius: $modal-border-radius;
+            background-color: $modal-background-color;
+            border: $modal-border;
+            margin: $modal-margin;
+            padding: 20px;
+            width: 60%;
+            .modal-header {
+                overflow: hidden;
+                clear: both;
+                border-bottom: 1px solid #ddd;
+                padding-bottom: 10px;
+                font-size: 24px;
+                .close {
+                    color: #aaa;
+                    float: right;
+                    font-size: 28px;
+                    font-weight: bold;
+                }
+
+                .close:hover,
+                .close:focus {
+                    color: black;
+                    text-decoration: none;
+                    cursor: pointer;
+                }
+            }
+            .modal-body {
+                overflow: hidden;
+                clear: both;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 100%;
+                display: grid;
+            }
+
+            .modal-footer {
+                padding-top: 10px;
+                border-top: 1px solid #ddd;
+            }
+
+            &.modal-lg {
+                width: 80%;
+            }
+            &.modal-sm {
+                width: 40%;
+            }
+        }
+    }
+
+    .modal-background {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+
+        /* semi-transparent black  */
+        background-color: #000;
+        opacity: $modal-overlay-opacity;
+
+        /* z-index must be below .jw-modal and above everything else  */
+        z-index: 900;
+    }
+}

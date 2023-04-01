@@ -1,0 +1,12 @@
+.textarea {
+    outline: none;
+    border: $textarea-border;
+    border-radius: $textarea-border-radius;
+    padding: $textarea-padding;
+    background-color: $textarea-background-color;
+    color: $textarea-color;
+
+    &-lg {
+        font-size: $textarea-lg-font-size;
+    }
+}
